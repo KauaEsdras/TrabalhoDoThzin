@@ -1,15 +1,12 @@
-// Função para adicionar a animação de fade-in
 document.addEventListener('DOMContentLoaded', () => {
     const recipeCards = document.querySelectorAll('.recipe-card');
     
-    // Função de Fade In
     recipeCards.forEach((card, index) => {
         setTimeout(() => {
             card.classList.add('fade-in');
-        }, 300 * index); // Atraso para cada card aparecer
+        }, 300 * index);
     });
 
-    // Scroll Reveal para cards
     window.addEventListener('scroll', revealOnScroll);
     function revealOnScroll() {
         const revealElements = document.querySelectorAll('.recipe-card');
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Função de Animação de Zoom nas Imagens
 const images = document.querySelectorAll('.recipe-card img');
 images.forEach(image => {
     image.addEventListener('mouseover', () => {
